@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.PrePersist;
+import java.time.LocalDateTime;
 
 @Entity
 public class Cliente {
@@ -15,6 +17,15 @@ public class Cliente {
 	private String nome;
 	@ManyToOne
 	private Endereco endereco;
+	private LocalDateTime dataCriacao;
+	
+	public Cliente() {
+	}
+	
+	public Cliente(String nome, Endereco endereco) {
+		this.nome = nome;
+		this.endereco = endereco;
+	}
 
 	public Long getId() {
 		return id;
@@ -38,6 +49,19 @@ public class Cliente {
 
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
+	}
+
+	public LocalDateTime getDataCriacao() {
+		return dataCriacao;
+	}
+
+	public void setDataCriacao(LocalDateTime dataCriacao) {
+		this.dataCriacao = dataCriacao;
+	}
+	
+	@PrePersist
+	protected void onCreate() {
+		dataCriacao = LocalDateTime.now();
 	}
 
 }
