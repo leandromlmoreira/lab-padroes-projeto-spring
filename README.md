@@ -175,7 +175,7 @@ Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) par
 
 **Leandro Macedo Leal Moreira**
 
-- 🐙 GitHub: [@seu-usuario](https://github.com/seu-usuario)
+- 🐙 GitHub: [@leandromlmoreira](https://github.com/leandromlmoreira)
 
 ## 🙏 Agradecimentos
 
